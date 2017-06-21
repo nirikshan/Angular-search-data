@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Two Way Data Binding .</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body  ng-app="Nirikshan_ko_app">
+<h1 style="text-align:center;">Programmers In Xprinn.</h1>
+<br>
+Search programming languages:<input type="Text" ng-model="out.pl">
+<br><br><br>
+  <div ng-controller="MyContRollEr">
+      <table border="2">
+   	    <tr>
+   	   	   <td>Programming Language:</td>
+   	   	   <td>Percentage:</td>
+   	   	   <td>Salary:</td>
+   	   	   <td>People:</td>
+   	   	   <td>Started Date:</td>
+   	    </tr>
+   	     <tr ng-repeat="data in info | filter:out">
+   	   	   <td>{{data.pl}}</td>
+   	   	   <td>{{data.percent}}</td>
+   	   	   <td>{{data.salary |currency:'Rs.'}}</td>
+   	   	   <td>{{data.people | number :2}}</td>
+   	   	   <td>{{data.date | date:"yyyy/MM/dd"}}</td>
+   	    </tr>
+      </table>
+      <br>
+  </div>
+  <footer>
+  	<h5>By: Nirikshan (Dj Programmer).</h5>
+  	<a href="https://www.facebook.com/xprin.bd">https://www.facebook.com/xprin.bd</a>
+  </footer>
+</body>
+</html>
